@@ -2,6 +2,8 @@ import { ReactNode, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/lib/auth-context';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ThemeToggle';
+import { RealtimeIndicator } from '@/components/RealtimeIndicator';
 import {
   Shield,
   LayoutDashboard,
@@ -115,6 +117,12 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </button>
 
           <div className="flex-1" />
+
+          {/* Real-time Indicator */}
+          <RealtimeIndicator />
+
+          {/* Theme Toggle */}
+          <ThemeToggle />
 
           {/* Header Actions */}
           <button className="relative p-2 hover:bg-accent rounded-lg">

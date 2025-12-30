@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { Menu, X, Shield } from 'lucide-react';
 
 export function Navbar() {
@@ -42,6 +43,7 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
             <Link to="/auth">
               <Button variant="ghost" size="sm">
                 Sign In
